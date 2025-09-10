@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #360b17;
+  font-family: sans-serif;
+}
+
+/* Layout wrapper */
+.screen {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Orange container */
+.container {
+  background-color: #f48c25;
+  display: flex;
+  flex: 1 1 45%;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  min-height: 200px;
+}
+/*Allow per-box alignment */
+.container.staggered {
+  align-items: stretch;
+} 
+
+/* Red box styles */
+.box {
+  background-color: #7a0000;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+/* Variants */
+.box.tall {
+  height: 120px;
+}
+
+.box.wide {
+  width: 160px;
+}
+
+.box.small {
+  width: 60px;
+  height: 60px;
+}
+
+/* Vertical alignment utilities */
+.align-top {
+  align-self: flex-start;
+}
+
+.align-center {
+  align-self: center;
+}
+
+.align-bottom {
+  align-self: flex-end;
+}
+.container.staggered{
+ justify-content: center;    
+
+}
+
+/* Text box styling */
+.box.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  padding: 5px;
+}
