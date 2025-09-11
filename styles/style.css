@@ -29,26 +29,18 @@ body {
   border-radius: 12px;
   min-height: 200px;
 }
-/*Allow per-box alignment */
-.container.staggered {
-  align-items: stretch;
-} 
+
 
 /* Red box styles */
 .box {
   background-color: #7a0000;
   width: 80px;
-  height: 80px;
+  min-height: 80px;
   border-radius: 10px;
 }
 
-/* Variants */
-.box.tall {
-  height: 120px;
-}
-
 .box.wide {
-  width: 160px;
+ flex-grow: 1;
 }
 
 .box.small {
@@ -59,20 +51,54 @@ body {
 /* Vertical alignment utilities */
 .align-top {
   align-self: flex-start;
-}
+} 
 
 .align-center {
   align-self: center;
-}
+} 
 
 .align-bottom {
   align-self: flex-end;
 }
-.container.staggered{
- justify-content: center;    
 
+.container.box1 {
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
+.container.box2 {
+  justify-content: center;
+  align-items: stretch;
+}
+
+.box {
+  /* Replace height with min-height for stretch to work */
+   min-height: 80px;
+} 
+
+.box.tall {
+  min-height: 135px;
+  
+}
+
+.container.box3 {
+  justify-content: flex-end;
+  align-items: center;
+}
+.container.box5 {
+  justify-content: space-around;
+  align-items:baseline
+}
+
+.container.box4 {
+  justify-content: space-between; 
+  align-items: center;
+}
+.container.box6 {
+  justify-content: center;
+  align-items: flex-start;
+  align-items: center;
+}
 /* Text box styling */
 .box.text {
   display: flex;
